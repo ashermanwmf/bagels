@@ -1,4 +1,5 @@
 var React = require('react');
+var Options = require('./Options');
 
 class People extends React.Component {
   constructor(props) {
@@ -7,12 +8,17 @@ class People extends React.Component {
   		people: props.peopleArr  	
     }
   }
+
+  changeSelect(personName) {
+    console.log(personName)
+  }
+
   render() {
     return (
     	<form method='POST' action='/addToQueue'>
-        <select >
+        <select>
           {this.state.people.map(person =>
-            <option value={person.name} name={person.name} >{person.name}</option>
+            <Options person={person} selected={this.changeSelect.bind(this)}/>
           )}
         </select><br />
         <input type='text' name='bagleHalfs' />

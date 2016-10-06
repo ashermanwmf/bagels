@@ -19,7 +19,6 @@ class App extends React.Component {
       <body>
         <Nav />
     		<People peopleArr={this.state.people}/>
-
     	</body>
     	</html>
     );

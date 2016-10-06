@@ -19,7 +19,7 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 app.get('/', function(req, res) {
-	res.render('App', {people: [{ name: 'Andrew Sherman', bagel: true }, { name: 'Jeremy Toce', bagel: false }, { name: 'Jill Sherman', bagel: false }, { name: 'Matt Sherman', bagel: false }]});
+	res.render('App', {people: [{ name: 'Andrew', bagel: true }, { name: 'Jake', bagel: false }, { name: 'Kevin', bagel: false }, { name: 'Matt', bagel: false }]});
 })
 
 // change the status of a bagel eater so they can be in the queue
